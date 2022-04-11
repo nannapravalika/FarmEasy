@@ -1,0 +1,509 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FarmEasy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'main/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'main/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'main/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light  px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0 "><i class="fas fa-tractor  me-3" style="color: #fd7e14;"></i>FarmEasy </h1>
+                    <!-- <img src="{% static 'img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="{% url 'farmer_home' %}" class="nav-item nav-link ">Home</a>
+                        <a href="{% url 'farmer_help' %}" class="nav-item nav-link">Need Help</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link active dropdown-toggle " data-bs-toggle="dropdown">Major Crops</a>
+                            <div class="dropdown-menu bg-secondary m-0">
+                                <a href="{% url 'farmer_food_crops' %}" class="active dropdown-item">Food Crops</a>
+                                <a href="{% url 'farmer_non_food_crops' %}" class="dropdown-item">Non Food Crops</a>
+                                 
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Dealers</a>
+                            <div class="dropdown-menu bg-secondary m-0">
+                                <a href="{% url 'farmer_seed_varities' %}" class="dropdown-item">Seeds</a>
+                                <a href="{% url 'farmer_fertilizer_varities' %}" class="dropdown-item">Fertilizer</a>
+                                <a href="{% url 'farmer_machinery_varities' %}" class="dropdown-item">Machinery</a>
+                                <a href="{% url 'farmer_pesticide_varities' %}" class="dropdown-item">Pesticides</a>
+                                 
+                            </div>
+                        </div>
+                        <a href="{% url 'farmer_feedback' %}" class="nav-item nav-link">Leave A Feedback</a>
+                        <a href="{% url 'farmer_complaints' %}" class="nav-item nav-link">Had Complaints?</a>
+                        <a href="{% url 'index' %}" class="nav-item nav-link">Logout</a>
+                    </div>
+                     
+                </div>
+            </nav>
+            <div class="container-fluid py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-8 pt-5 text-center text-lg-start">
+                            <h1 class="display-4 text-white mb-4 animated slideInLeft">Food Crops</h1>
+                             
+                             
+                        </div>
+                         
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+          <br>
+          <br>
+
+          <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="  position-relative mb-4 pb-4">
+                            <h1 class="mb-2 text-center">About Wheat<hr></h1>
+                        <br>
+                        <br>
+                        
+                          <center>  <img class=" text-center wow zoomIn rounded" data-wow-delay="0.5s" src="{% static 'main/img/wheat-2.jpg' %}"></center>
+                        </div>
+                          <br>
+                        
+            
+                        <p style="text-align:justify;"  class="mb-4">Wheat is the main cereal crop in India. The total area under the crop is about 29.8 million hectares in the country. The production of wheat in the country has increased significantly from 75.81 million MT in 2006-07 to an all time record high of 94.88 million MT in 2011-12. The productivity of wheat which was 2602 kg/hectare in 2004-05 has increased to 3140 kg/hectare in 2011-12. The major increase in the productivity of wheat has been observed in the states of Haryana, Punjab and Uttar Pradesh. Higher area coverage is reported from MP in recent years.</p>
+                        <p style="text-align:justify;" class="mb-4"> Indian wheat is largely a soft/medium hard, medium protein, white bread wheat, somewhat similar to U.S. hard white wheat. Wheat grown in central and western India is typically hard, with high protein and high gluten content. India also produces around 1.0-1.2 million tons of durum wheat, mostly in the state of Madhya Pradesh. Most Indian durum is not marketed separately due to segregation problems in the market yards. However, some quantities are purchased by the private trade at a price premium, mainly for processing of higher value/branded products.</p>
+                        <p style="text-align:justify;" class="mb-4">The production and productivity of Wheat crop were quite low, when India became independent in 1947. The production of Wheat was only 6.46 million tonnes and productivity was merely 663 kg per hectare during 1950-51, which was not sufficient to feed the Indian population. The Country used to import Wheat in large quantities for fulfilling the needs of our people from many countries like USA under PL-480. The reasons of low production and productivity of Wheat at that time was (a) the tall growing plant habit resulting in lodging, when grown under fertile soils, (b) the poor tillering and low sink capacity of the varieties used, (c) higher susceptibility to diseases, (d) the higher sensitivity to thermo & photo variations, etc., resulting in poor adaptability, and (e) longer crop duration resulting in a long exposure of plants to the climatic variations and insect pest / disease attacks.</p>
+                        <p style="text-align:justify;" class="mb-4">The Government of India appointed a commission in 1961 to assess the feasibility of increasing the crop productivity under prevailing Indian ecological conditions. As result of various steps taken by Govt. of India, the Wheat scenario in our country has completely changed. In the post Independence era, country used to import Wheat for our needs but due to bumper increase in the production and productivity of Wheat in the 'Green Revolution' period in late sixties, our country became self dependent in Wheat production. At present, country is producing much more excess Wheat than the requirement and Godowns are over-flooded with Wheat.</p>
+                         
+                    </div>
+                    <div class="  position-relative mb-4 pb-4">
+                        <h1 class="mb-2 text-center">Varieties released by <a href="https://iiwbr.icar.gov.in/" >IIWBR</a> during last 10 years<hr></h1>
+                    <br>
+                    <br>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="text-align:justify;">Sr.No</th>
+                            <th >Name of variety</th>
+                            <th style="text-align:justify;">Area of Adoption</th>
+                            <th style="text-align:justify;"> Production Condition</th>
+                            <th style="text-align:justify;">Salient Features</th>
+                             
+                            
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                         
+                        <tr>
+                            <td style="text-align:justify;"> 1</td>
+                            <td style="text-align:justify;">DBW 222 </td>
+                            <td style="text-align:justify;">NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region)) </td>
+                            <td style="text-align:justify;">Timely sown, irrigated conditions</td>
+                            <td style="text-align:justify;">Seed yield –  61.3 q/ha <br>Seed yield –  61.3 q/ha <br>Plant height – 103 (98-108) <br>Plant height – 103 (98-108) <br>Resistant to brown rust, Moderately resistant to yellow rust, Only 18.4% reduction in yield was recorded, when sown late, chapatti quality score (7.5/10), Bread quality score 8.24 and biscuit spread factor 8.45</td>
+                            <td></td>
+                             
+                             
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 2 </td>
+                            <td style="text-align:justify;"> DBW 252 </td>
+                            <td style="text-align:justify;">  NEPZ (Eastern Uttar Pradesh, Bihar, Jharkhand, Odisha, West Bengal, Assom and plains of North Eastern States)</td>
+                            <td style="text-align:justify;"> Timely sown, restricted irrigated conditions </td>
+                            <td style="text-align:justify;"> Seed yield –  37.0 q/ha <br>
+                                Potential Yield-55.6q/ha <br>
+                                
+                                Plant height – 98(97-99) <br>
+                                
+                                Maturity (days):127 (125-130) <br>
+                                
+                                Highly resistant to Wheat Blast Disease (Av. 2.5%),  it has a drought susceptibility index of 0.74 </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;">3  </td>
+                            <td style="text-align:justify;"> DDW47	 </td>
+                            <td style="text-align:justify;"> CZ (Madhya Pradesh, Chhattisgarh, Gujarat, Rajasthan (Kota and Udaipur divisions)  and Uttar Pradesh (Jhansi division)) </td>
+                            <td style="text-align:justify;"> Timely sown, irrigated conditions
+                            </td>
+                            <td style="text-align:justify;">  Seed yield –  37.3 q/ha <br>
+                                Potential Yield-74.1.6q/ha <br>
+                                
+                                Plant height – 84(83-85) <br>
+                                
+                                Maturity (days):121 (118-121) <br>
+                                
+                                Higher yellow pigment content of 7.57 ppm; Suitable for good quality pasta with high pasta acceptability score( 7.9)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 4 </td>
+                            <td style="text-align:justify;">  	KARAN VANDANA (DBW 187)*</td>
+                            <td style="text-align:justify;"> NEPZ (Eastern Uttar Pradesh, Bihar, Jharkhand, Odisha, West Bengal, Assom and plains of North Eastern States)</td>
+                            <td style="text-align:justify;"> Timely sown, irrigated conditions</td>
+                            <td style="text-align:justify;"> Seed yield –  48.8 q/ha <br>
+                                Potential Yield-64.7q/ha <br>
+                                
+                                Plant height – 100 cm <br>
+                                
+                                Maturity (days): 120 (110-140) <br>
+                                
+                                Good biscuit spread factor (8.6cm), High Fe content (43.1 ppm), resistance to yellow and brown rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 5 </td>
+                            <td style="text-align:justify;"> DBW 173	 </td>
+                            <td style="text-align:justify;"> 	NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region)) </td>
+                            <td style="text-align:justify;"> Late sown, irrigated conditions </td>
+                            <td style="text-align:justify;"> Seed yield –  47.20 q/ha <br>
+                                Potential Yield-57q/ha <br>
+                                
+                                Plant height – 90 cm (87-92 cm) <br>
+                                
+                                Maturity(days)- 122 (119-124) <br>
+                                
+                                Tolerant to terminal Heat (HSI=0.98), Resistant to yellow and brown rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;">6  </td>
+                            <td style="text-align:justify;"> DBW 168	 </td>
+                            <td style="text-align:justify;"> 	PZ (Maharashtra and  Karnataka) </td>
+                            <td style="text-align:justify;"> Timely sown, irrigated conditions </td>
+                            <td style="text-align:justify;">	Seed yield –  47.46 q/ha <br>
+                                Potential Yield-70.1 <br>
+                                
+                                Plant height – 84 cm (85-93 cm) <br>
+                                
+                                Maturity(days)- 115 (107-125) <br>
+                                
+                                Very good for chapati (8.15)as well as for biscuit quality, Soft grains (36), resistance to brown and black rust  </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 7 </td>
+                            <td style="text-align:justify;"> WB 2	 </td>
+                            <td style="text-align:justify;">	NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region))  </td>
+                            <td style="text-align:justify;">Timely sown, irrigated conditions  </td>
+                            <td style="text-align:justify;"> Seed yield –  51.60q//ha <br>
+                                Potential Yield-58.9q/ha <br>
+                                
+                                Plant height –  100 cm. <br>
+                                
+                                Maturity (days)- 142 (129-157) <br>
+                                
+                                Zinc  (42.0 ppm) and iron (40.0 ppm) rich  wheat variety,  Resistance to yellow and brown  rusts and powdery mildew </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;">8  </td>
+                            <td style="text-align:justify;"> DBW 93	 </td>
+                            <td style="text-align:justify;"> 	PZ (Maharashtra and  Karnataka) </td>
+                            <td style="text-align:justify;"> Timely sown, restricted irrigated conditions </td>
+                            <td style="text-align:justify;"> Seed yield –  29.30q/ha <br>
+                                Potential Yield-39q/ha <br>
+                                
+                                Plant height –  54-68cm. <br>
+                                
+                                Maturity(days)- 100-110 <br>
+                                
+                                Resistance to black rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;">9  </td>
+                            <td style="text-align:justify;"> DBW 107 </td>
+                            <td style="text-align:justify;"> NEPZ (Eastern Uttar Pradesh, Bihar, Jharkhand, Odisha, West Bengal, Assom and plains of North Eastern States) </td>
+                            <td style="text-align:justify;"> Late sown, irrigated conditions </td>
+                            <td style="text-align:justify;"> Seed yield –  41.30q/ha <br>
+                                Potential Yield-68.7q/ha <br>
+                                
+                                Plant height – 89 cm (86-91 cm) <br>
+                                
+                                Maturity(days)- 109 <br>
+                                
+                                Resistance to brown rust and tolerant to terminal heat </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 10 </td>
+                            <td style="text-align:justify;"> 	DBW 110 </td>
+                            <td style="text-align:justify;"> 	CZ (Madhya Pradesh, Chhattisgarh, Gujarat, Rajasthan (Kota and Udaipur divisions)  and Uttar Pradesh (Jhansi division) </td>
+                            <td style="text-align:justify;"> Timely sown, restricted irrigated conditions </td>
+                            <td style="text-align:justify;">Seed yield –  39q/ha <br>
+                                Potential Yield-50.5q/ha
+                                <br>
+                                Plant height – 89 cm (83-89 cm) <br>
+                                
+                                Maturity (days)- 124 (123-124) <br>
+                                
+                                Resistance to brown rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 11 </td>
+                            <td style="text-align:justify;"> DBW 88	 </td>
+                            <td style="text-align:justify;"> 	NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region)) </td>
+                            <td style="text-align:justify;"> Timely sown, irrigated conditions </td>
+                            <td style="text-align:justify;"> Seed yield –  54.2q/ha <br>
+                                Potential Yield-69.9q/ha <br>
+                                
+                                Plant height –  99cm (79-121cm) <br>
+                                
+                                Maturity (days)- 143(122-163) <br>
+                                
+                                Resistance to yellow and brown rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 12 </td>
+                            <td style="text-align:justify;">  DBW 88	</td>
+                            <td style="text-align:justify;"> NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region)) </td>
+                            <td style="text-align:justify;"> Late sown, irrigated conditions </td>
+                            <td style="text-align:justify;">Seed yield –  42.7q/ha <br>
+                                Potential Yield-66.6q/ha <br>
+                                
+                                Plant height –   91 (76-105) cm (cm)
+                                 <br>
+                                Maturity (days)- 121 (104-135) <br>
+                                
+                                Adult plant resistance to yellow and brown rusts  </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 13 </td>
+                            <td style="text-align:justify;">  	DBW 71</td>
+                            <td style="text-align:justify;"> 	NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region)) </td>
+                            <td style="text-align:justify;"> Late sown, irrigated conditions </td>
+                            <td style="text-align:justify;"> Seed yield –  42.7q/ha <br>
+                                Potential Yield-68.9q/ha
+                                 <br>
+                                Plant height –  90 cm
+                                <br>
+                                Maturity (days)- 119 <br>
+                                
+                                Resistance to yellow rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 14 </td>
+                            <td style="text-align:justify;">  DPW 621-50 (PBW 621 & DBW 50)</td>
+                            <td style="text-align:justify;"> NWPZ (Punjab, Haryana, Delhi, Rajasthan (except Kota and Udaipur divisions) and Western UP (except Jhansi division), parts of J&K (Jammu and Kathua distt.) and parts of HP (Una distt. and Paonta valley) and Uttarakhand (Tarai region)) </td>
+                            <td style="text-align:justify;">Timely sown, irrigated conditions  </td>
+                            <td style="text-align:justify;"> Seed yield –  51.7 q/ha <br>
+                                Potential Yield-69.8q/ha <br>
+                                
+                                Plant height –   97 cm <br>
+                                
+                                Maturity (days)- <br>
+                                
+                                Resistance to yellow rust </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 15 </td>
+                            <td style="text-align:justify;"> DBW 39</td>
+                            <td style="text-align:justify;"> 	NEPZ (Eastern Uttar Pradesh, Bihar, Jharkhand, Odisha, West Bengal, Assom and plains of North Eastern States) </td>
+                            <td style="text-align:justify;">Timely sown, irrigated conditions  </td>
+                            <td style="text-align:justify;"> Seed yield –  44.6q/ha <br>
+                                Potential Yield-64.7q/ha <br>
+                                
+                                Plant height –   89cm (87-92 cm) <br>
+                                
+                                Maturity (days)- 121 (119-123) <br>
+                                
+                                Resistance to black rust, brown rust and tolerant to leaf blight </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:justify;"> 16 </td>
+                            <td style="text-align:justify;"> CBW 38	 </td>
+                            <td style="text-align:justify;"> NEPZ (Eastern Uttar Pradesh, Bihar, Jharkhand, Odisha, West Bengal, Assom and plains of North Eastern States) </td>
+                            <td style="text-align:justify;"> Timely sown, irrigated conditions </td>
+                            <td style="text-align:justify;">TSeed yield –  44.4 q/ha <br>
+                                Potential Yield-65.3q/ha <br>
+                                
+                                Plant height – 93 cm (90-94cm) <br>
+                                
+                                Maturity (days)- 121 (119-123) <br>
+                                
+                                Resistance to rust</td> 
+                        </tr>
+                        
+                         
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="  position-relative mb-4 pb-4">
+                        <h1 class="mb-2 text-center">  Climate Requirements
+                            <hr></h1>
+
+                            <p style="text-align:justify;"> Wheat crop has wide adaptability. It can be grown not only in the tropical and sub-tropical zones, but also in the temperate zone and the cold tracts of the far north ,beyond even the 60 degree north altitude . Wheat can tolerate severe cold and snow and resume growth with the setting in of warm weather in spring .It can be cultivated from sea level to as high as 3300 meters.</p>
+                            <p style="text-align:justify;">The best wheat are produced in areas favoured with cool, moist weather during the major portion of the growing period followed by dry, warm weather to enable the grain to ripen properly. The optimum temperature range for ideal germination of wheat seed is 20-25 C though the seeds can germinate in the temperature range 3.5 to 35 c. Rains just after sowing hamper germination and encourage seedling blight. Areas with a warm and damp climate are not suited for wheat growing.</p>
+                            <p style="text-align:justify;">During the heading and flowering stages, excessively high or low temperatures and drought are harmful to wheat. Cloudy weather, with high humidity and low temperatures is conducive for rust attack. Wheat plant requires about 14-15 c optimum average temperature at the time of ripening . The temperature conditions at the time of grain filling and development are very crucial for yield. Temperatures above 250c during this period tend to depress grain weight. When temperatures are high, too much energy I lost through the process of transpiration by the plants and the reduced residual energy results in poorer grain formation and lower yields. Wheat is mainly a rabi (winter) season crop in India.</p>
+                            
+                    </div>
+                    <div class="  position-relative mb-4 pb-4">
+                        <h1 class="mb-2 text-center">  Soil
+                            <hr></h1>
+                            <p style="text-align:justify;">Wheat is grown in a variety of soils of India. Soils with a clay loam or loam texture, good structure and moderate water holding capacity are ideal for wheat cultivation. Care should be taken to avoid very porous and excessively drained oils. Soil should be neutral in its reaction. Heavy soil with good drainage are suitable for wheat cultivation under dry conditions. These soils absorb and retain rain water well. Heavy soils with poor structure and poor drainage are not suitable as wheat is sensitive to water logging. Wheat can be successfully grown on lighter soils provided their water and nutrient holding capacity are improved.</p>
+                           
+                             
+                    </div> 
+                    <div class="  position-relative mb-4 pb-4">
+                        <h1 class="mb-2 text-center"> Fertilizer management
+                            <hr></h1>
+                            <p style="text-align:justify;">The time and placement of fertilizer is another area where significant progress was made. It was demonstrated that 120 kg nitrogen, 60 kg phosphorus and 30 kg potash per hectare were required for optimum productivity. The N was to be applied in two split doses of 60 kg as basal and the remaining 60 kg at first irrigation and full phosphorus and potash to be applied as basal. Recently, the new wheat varieties have responded up to 180 kg N/ha with optima dose around 150 kg/ha. In the Indo-Gangetic plains, application of zinc @ 25kg/ha in rice-wheat system was found to increase the yield substantially. Recently, the use of sulphur has been found beneficial for enhancing the productivity as well as the grain protein content of wheat. Response to Mn (pockets in the Indo-Gangetic plains) and boron (eastern and far eastern region) has also been realized.</p>
+                    </div>  
+                    <div class="  position-relative mb-4 pb-4">
+                        <h1 class="mb-2 text-center"> Nutrient management
+                            <hr></h1>
+                            <p style="text-align:justify;">With intensive agriculture, deficiency of essential nutrients has also become wide spread. The work conducted under the All India Coordinated Research Project on Micronutrient in Crops and Soils, has shown wide spread deficiency of zinc in soils in India. At the national level, the deficiency level in micro nutrients is Zn: 46 %, B: 17 %, Mo: 12 %, Fe: 11 % and Cu: 5%. The deficiency of sulphur has also been reported across a wide range of soils (38%).The yield response to sulphur has been obtained in more than 40 crops including cereal, millets, oilseeds and pulses etc. To realize the potential yield, strategies may include</p>
+                            <ul>
+                                <li>
+                                    Site specific nutrient management for targeted yields
+                                </li>
+                                <li>
+                                    Integration of crop residues, bio fertilizers etc with inorganic fertilization
+                                </li>
+                                <li>
+                                    Tillage techniques like FIRBS for increasing nutrient use efficiencies
+                                </li>
+                                <li>
+                                    Remote sensing for efficient Nutrient management
+                                </li>
+                                <li>
+                                    Nutrient management, straw quality vis-à-vis human and animal health
+                                </li>
+                            </ul>             
+                    
+                </div>
+            </div>
+        </div>
+
+
+          <div class="container-fluid bg-primary text-white footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row gy-5 gx-4 pt-5">
+                   <!-- <div class="col-12">
+                        <h5 class="fw-bold text-white mb-4">Subscribe Our Newsletter</h5>
+                        <div class="position-relative" style="max-width: 400px;">
+                            <input class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                            <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h5 class="fw-bold text-white mb-4">About Us</h5>
+                                <a class="btn btn-link" href="">About Us</a>
+                                <a class="btn btn-link" href="">Contact Us</a>
+                                <a class="btn btn-link" href="">Privacy Policy</a>
+                                <a class="btn btn-link" href="">Terms & Condition</a>
+                                <a class="btn btn-link" href="">Support</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="fw-bold text-white mb-4">Our Services</h5>
+                                <a class="btn btn-link" href="">Domain Register</a>
+                                <a class="btn btn-link" href="">Shared Hosting</a>
+                                <a class="btn btn-link" href="">VPS Hosting</a>
+                                <a class="btn btn-link" href="">Dedicated Hosting</a>
+                                <a class="btn btn-link" href="">Reseller Hosting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="fw-bold text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-md-6 col-lg-4 mt-lg-n5">
+                        <div class="bg-light rounded" style="padding: 30px;">
+                            <input type="text" class="form-control border-0 py-2 mb-2" placeholder="Name">
+                            <input type="email" class="form-control border-0 py-2 mb-2" placeholder="Email">
+                            <textarea class="form-control border-0 mb-2" rows="2" placeholder="Message"></textarea>
+                            <button class="btn btn-primary w-100 py-2">Send Message</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#"><strong>FarmEasy</strong></a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://codebook.in"><strong>Codebook</strong></a>
+                            <br>
+                            
+                        </div>
+                        <!-- <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+</div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'main/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'main/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'main/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'main/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'main/js/main.js' %}"></script>
+</body>
+
+</html>
